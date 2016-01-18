@@ -1,0 +1,51 @@
+body {
+	background: black;
+}
+.wrapper {
+	margin: 0px;
+	height: auto;
+	padding: 0px;
+	margin-top: 60px;
+}
+.login-content {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.input {
+	width: 90%;
+	height: 40px;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.inpfile{
+    width: 240px;
+    height: 29px;
+    line-height: 50px;
+}
+.button {
+	background: #3894fc;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+}
+h1 {
+	color: aliceblue;
+	font-family: monospace;
+	font-size: 85px;
+	margin: 0;
+}
+.create-acc {
+	padding: 10px;
+}
+.create-acc a {
+	color: #23cefd;
+	text-decoration: none;
+}

@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.wrapper {
+	background: black;
+}
+.wrapper .content {
+	width: 960px;
+	margin: auto;
+}
+.wrapper .content .header {
+}
+.wrapper .content .header .top {
+	height: 70px;
+	width: 100%;
+	padding: 10px;
+}
+.wrapper .content .header .top .logo {
+	width: 30%;
+	float: left;
+}
+.wrapper .content .header .top .logo .logo-img {
+	max-width: 60px;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 10px;
+}
+.wrapper .content .header .top .logo h1 {
+	color: aliceblue;
+	line-height: 60px;
+	font-weight: 600;
+	font-family: monospace;
+	font-size: 45px;
+	float: left;
+	margin: 0;
+}
+.wrapper .content .header .top .top-menu {
+	float: right;
+	width: 50%;
+	box-sizing: border-box;
+	height: 100%;
+}
+.wrapper .content .header .top .top-menu>ul {
+	float: right;
+}
+.wrapper .content .header .top .top-menu>ul>li {
+	display: block;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-right: 15px;
+}
+.wrapper .content .header .top .top-menu>ul>li:nth-child(1) {
+	background: #9840fb;
+}
+.wrapper .content .header .top .top-menu>ul>li:nth-child(2) {
+	background: #4C207D;
+	margin-right: 0px;
+}
+.wrapper .content .header .top .top-menu>ul>li:nth-child(3) {
+	background: #5C5C5C;
+}
+.wrapper .content .header .top .top-menu>ul>li>a {
+	color: aliceblue;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: monospace;
+}
+.wrapper .content .header .top .top-menu>ul>li>ul{display:none;}
+.wrapper .content .header .top .top-menu>ul>li:hover ul{display:block;position: absolute;}
+.wrapper .content .header .top .top-menu>ul>li ul li{
+    height: 40px;
+    line-height: 40px;
+}
+.wrapper .content .header .top .top-menu>ul>li ul li a{color: aliceblue;font-size: 24px;}
+.wrapper .content .header .top .top-menu>ul>li ul li a:hover{color:#fff;}
+.wrapper .content .header .nav {
+	width: 100%;
+	height: 50px;
+	box-sizing: border-box;
+}
+.wrapper .content .header .nav ul {
+}
+.wrapper .content .header .nav ul li {
+	display: block;
+	width: 20%;
+	float: left;
+	text-align: center;
+	border-bottom: 3px solid red;
+	box-sizing: border-box;
+}
+.wrapper .content .header .nav ul li a {
+	height: 50px;
+	line-height: 50px;
+	color: aliceblue;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-sizing: border-box;
+}
