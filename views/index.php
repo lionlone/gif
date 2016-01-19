@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <title>GIPHY</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -36,10 +36,11 @@
 			</div>
 			<div class="main-content">
 				<div class="item">
-					<img src="images/untitled_by_mlazar127-d6izkti.gif" />
-				</div>
-				<div class="item">
-					<img src="images/untitled_by_mlazar127-d6izkti.gif" />
+                    <?php
+                        if(isset($arr)){
+                        echo $arr[1];
+                        }
+                    ?>
 				</div>
 			</div>
 		</div>
