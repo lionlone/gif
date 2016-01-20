@@ -10,8 +10,8 @@
        //Kết nối database
        public function connect(){
         $this->conn = mysql_connect($this->db_host, $this->db_user, $this->db_pass);
-        //mysql_set_charset("utf8",$this->conn);
-	//mysql_query("set names 'utf8'");
+        mysql_set_charset("utf8",$this->conn);
+	   //mysql_query("set names 'utf8'");
         if($this->conn){
             $select_db = mysql_select_db($this->db_name, $this->conn);
             if($select_db){
@@ -37,6 +37,7 @@
        public function query($sql){
         $this->free_query();
         $this->result = mysql_query($sql);
+        return $this->result;
        }
        // Giải phóng sql đã thực thi 
        public function free_query(){
@@ -54,7 +55,7 @@
        // fetch dữ liệu trả về mảng
        public function fetch(){
         if($this->result){
-            $row = mysql_fetch_array($this->result);
+            $row = mysql_fetch_assoc($this->result);
             return $row;
         }
        }

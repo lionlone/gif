@@ -8,9 +8,8 @@
         $logout = '<ul><li><a href="controller/login.php?logout=true">Logout</a></ul>';
     };
     include"model/database.php";
-            $vie = new database;
-            $vie->connect();
-            $que = $vie->query("SELECT * FROM images");
-            $arr = $vie->fetch();
+            $demo = new database;
+            $demo->connect();
+            $quer = $demo->query("SELECT * FROM images");
 	include"views/index.php";
 ?>

@@ -36,11 +36,21 @@
 			</div>
 			<div class="main-content">
 				<div class="item">
-                    <?php
-                        if(isset($arr)){
-                        echo $arr[1];
-                        }
-                    ?>
+                            <?php 
+                            $arr[] = "";
+                                while($row = $demo->fetch()){
+                                    //print_r($row);
+                                    //echo "<br />";
+                                    array_push ($arr, $row);
+                                }
+                                array_shift ($arr);
+                                //print_r($arr);
+                                foreach($arr as $vale){
+                                    echo $vale["title_img"];
+                                    //print_r($vale);
+                                    echo "<br />";
+                                }
+                            ?>
 				</div>
 			</div>
 		</div>
