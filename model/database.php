@@ -10,6 +10,8 @@
        //Kết nối database
        public function connect(){
         $this->conn = mysql_connect($this->db_host, $this->db_user, $this->db_pass);
+        //mysql_set_charset("utf8",$this->conn);
+	//mysql_query("set names 'utf8'");
         if($this->conn){
             $select_db = mysql_select_db($this->db_name, $this->conn);
             if($select_db){
