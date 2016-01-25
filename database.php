@@ -47,17 +47,26 @@
        }
        // Trả về số dòng trong bảng
        public function num_row(){
-        if($this->result){
             $rows = mysql_num_rows($this->result);
+            return $rows;
+       }
+       // fetch dữ liệu trả về mảng 2 chiều
+       public function fetchs(){
+        if($this->result){
+            $rows[] = "";
+            while($row = mysql_fetch_array($this->result)){
+                array_push ($rows, $row);
+            }
+            array_shift($rows);
             return $rows;
         }
        }
-       // fetch dữ liệu trả về mảng
+       // fetch dữ liệu trả về mảng 1 chiều
        public function fetch(){
-        if($this->result){
-            $row = mysql_fetch_assoc($this->result);
-            return $row;
-        }
+            if($this->result){
+                $row = mysql_fetch_array($this->result);
+                return $row;
+            }
        }
 	}
 ?>

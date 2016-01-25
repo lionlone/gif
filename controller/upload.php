@@ -1,5 +1,5 @@
 <?php
-    include"../controller/user.php";
+    include"../model/database.php";
     $file_name = "";
     $file_type = "";
     $file_path = "";
@@ -16,11 +16,12 @@
             move_uploaded_file($file_path, $new_path);
             $file_error = $_FILES["fileUpload"]["error"];
             if($file_error == 0){
-               $sql = "INSERT INTO gif.images (`title_img`, `name-img`, `id_user`) VALUES ('$file_title','$file_name', '0');";
-               $upload = new user;
+               $sql = "INSERT INTO gif.images (`title_img`, `name_img`, `id_user`) VALUES ('$file_title','$file_name', '0');";
+               $upload = new database;
+               $upload->connect();
                $query = $upload->query($sql);
                echo $query;
-               if(empty($query)){
+               if(!empty($query)){
                 $success = "Upload file và ghi dư liệu thành công.";
                 echo $success;
                 return $success;

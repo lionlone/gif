@@ -18,8 +18,8 @@
 					<div class="top-menu">
 						<ul>
 							<li><a href="controller/upload.php">Upload</a></li>
-							<li><a href="controller/sign.php">Create</a></li>
-							<li><a href="<?=$login_link;?>"><?=$login;?></a><?=$logout;?></li>
+							<li><a href="?page=sign">Create</a></li>
+							<li><a href="<?=$login_link;?>"><?=$userlogin;?></a><?=$logout;?></li>
 						</ul>
 					</div>
 					
@@ -35,23 +35,16 @@
 				</div>
 			</div>
 			<div class="main-content">
-				<div class="item">
-                            <?php 
-                            $arr[] = "";
-                                while($row = $demo->fetch()){
-                                    //print_r($row);
-                                    //echo "<br />";
-                                    array_push ($arr, $row);
-                                }
-                                array_shift ($arr);
-                                //print_r($arr);
-                                foreach($arr as $vale){
-                                    echo $vale["title_img"];
-                                    //print_r($vale);
-                                    echo "<br />";
-                                }
-                            ?>
-				</div>
+                <?php
+                    $img = new database;
+                    $img->connect();
+                    $img->query("SELECT * FROM IMAGES;");
+                    $array_img = $img->fetchs();
+                    foreach($array_img as $img){
+                        echo '<img src="upload/img/' . $img['name_img'] . '" />';
+                    }
+                ?>
+				
 			</div>
 		</div>
 	</div>
