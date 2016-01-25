@@ -1,5 +1,5 @@
 <?php
-    include"../model/database.php";
+    include"../database.php";
     $file_name = "";
     $file_type = "";
     $file_path = "";
