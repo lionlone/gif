@@ -1,8 +1,24 @@
 <?php
     include"model/user.php";
+    include"model/upload.php";
     $user = new user;
     if(isset($_GET["page"])){
     switch($_GET["page"]){
+    case "upload":
+        if(empty($_SESSION["log"])){
+            header("Location:/gif/?page=login");
+        }
+        else{
+            $e = "Chưa cho file upload";
+            if(!empty($_FILES["fileUpload"])){
+                $e = upload($_FILES['fileUpload']['name'],$_FILES['fileUpload']['type'],$_FILES['fileUpload']['tmp_name'],$_POST["imgTitle"]);
+                include"views/upload.php";
+            }
+            else{
+                include"views/upload.php";
+            }
+        }
+        break;
     case "sign":
         if(!empty($_SESSION["log"])){
             header("Location:http://localhost/gif");

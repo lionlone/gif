@@ -17,7 +17,7 @@
 					</div>
 					<div class="top-menu">
 						<ul>
-							<li><a href="controller/upload.php">Upload</a></li>
+							<li><a href="?page=upload">Upload</a></li>
 							<li><a href="?page=sign">Create</a></li>
 							<li><a href="<?=$login_link;?>"><?=$userlogin;?></a><?=$logout;?></li>
 						</ul>
